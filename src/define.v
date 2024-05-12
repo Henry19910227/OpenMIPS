@@ -16,7 +16,6 @@
 `define ChipDisable         1'b0                //芯片禁止
 
 
-
 //**************** 指令 ****************//
 `define EXE_ORI             6'b001101           //ori指令碼
 `define EXE_NOP             6'b000000           //ori指令碼
