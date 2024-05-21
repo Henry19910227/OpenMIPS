@@ -1,0 +1,1259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<circuit>
+  <version>2</version>
+  <attributes>
+    <entry>
+      <string>romContent</string>
+      <romList>
+        <roms/>
+      </romList>
+    </entry>
+    <entry>
+      <string>Width</string>
+      <int>12</int>
+    </entry>
+  </attributes>
+  <visualElements>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>譯碼階段指令對應的地址</string>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>pc\_i</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+      </elementAttributes>
+      <pos x="460" y="260"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>譯碼階段的指令</string>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>inst\_i</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>bin</intFormat>
+        </entry>
+      </elementAttributes>
+      <pos x="460" y="400"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>從 Regfile 輸入的第一個讀取暫存器連接埠的輸入</string>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>reg1\_data\_i</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+      </elementAttributes>
+      <pos x="460" y="860"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>從 Regfile 輸入的第二個讀取暫存器連接埠的輸入</string>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>reg2\_data\_i</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+      </elementAttributes>
+      <pos x="460" y="980"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>復位信號</string>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>rst</string>
+        </entry>
+      </elementAttributes>
+      <pos x="460" y="1080"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>譯碼階段的指令要進行的運算的子類型</string>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>aluop\_o</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>8</int>
+        </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>dec</intFormat>
+        </entry>
+      </elementAttributes>
+      <pos x="1720" y="320"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>譯碼階段的指令要進行的運算的類型</string>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>alusel\_o</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>3</int>
+        </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>dec</intFormat>
+        </entry>
+      </elementAttributes>
+      <pos x="1720" y="260"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>譯碼階段的指令要寫入的目的暫存器位址</string>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>wd\_o</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>5</int>
+        </entry>
+      </elementAttributes>
+      <pos x="1720" y="1100"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>譯碼階段的指令是否有要寫入的目的暫存器</string>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>wreg\_o</string>
+        </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>dec</intFormat>
+        </entry>
+      </elementAttributes>
+      <pos x="1720" y="560"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>Regfile 模組的第二個讀取暫存器連接埠的讀取位址訊號</string>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>reg2\_addr\_o</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>5</int>
+        </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>dec</intFormat>
+        </entry>
+      </elementAttributes>
+      <pos x="1720" y="820"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>Regfile 模組的第二個讀取暫存器連接埠的讀取啟用訊號</string>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>reg2\_read\_o</string>
+        </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>dec</intFormat>
+        </entry>
+      </elementAttributes>
+      <pos x="1720" y="480"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>Regfile 模組的第一個讀取暫存器連接埠的讀取位址訊號</string>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>reg1\_addr\_o</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>5</int>
+        </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>dec</intFormat>
+        </entry>
+      </elementAttributes>
+      <pos x="1720" y="640"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>Regfile 模組的第一個讀取暫存器連接埠的讀取啟用訊號</string>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>reg1\_read\_o</string>
+        </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>dec</intFormat>
+        </entry>
+      </elementAttributes>
+      <pos x="1720" y="400"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Splitter</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Input Splitting</string>
+          <string>32</string>
+        </entry>
+        <entry>
+          <string>Output Splitting</string>
+          <string>26-31,25-21,20-16,15-11,10-6,5-0</string>
+        </entry>
+      </elementAttributes>
+      <pos x="580" y="400"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>alusel</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1720" y="260"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation reference="../../../../visualElement[15]/elementAttributes/entry/rotation"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>aluop</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1720" y="320"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>NetName</string>
+          <string>alusel</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1080" y="420"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>NetName</string>
+          <string>aluop</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1080" y="400"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>NetName</string>
+          <string>reg1\_read</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1080" y="440"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>reg1\_read</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1720" y="400"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>NetName</string>
+          <string>reg2\_read</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1080" y="460"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>reg2\_read</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1720" y="480"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>NetName</string>
+          <string>wreg</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1080" y="540"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>wreg</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1720" y="560"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Splitter</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Input Splitting</string>
+          <string>32</string>
+        </entry>
+        <entry>
+          <string>Output Splitting</string>
+          <string>15-0</string>
+        </entry>
+      </elementAttributes>
+      <pos x="580" y="580"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Splitter</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Input Splitting</string>
+          <string>32</string>
+        </entry>
+        <entry>
+          <string>Output Splitting</string>
+          <string>25-0</string>
+        </entry>
+      </elementAttributes>
+      <pos x="580" y="640"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>NetName</string>
+          <string>rs</string>
+        </entry>
+      </elementAttributes>
+      <pos x="660" y="420"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>NetName</string>
+          <string>rt</string>
+        </entry>
+      </elementAttributes>
+      <pos x="660" y="440"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>NetName</string>
+          <string>rd</string>
+        </entry>
+      </elementAttributes>
+      <pos x="660" y="460"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>NetName</string>
+          <string>shamt</string>
+        </entry>
+      </elementAttributes>
+      <pos x="660" y="480"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>NetName</string>
+          <string>func</string>
+        </entry>
+      </elementAttributes>
+      <pos x="660" y="500"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>NetName</string>
+          <string>imm</string>
+        </entry>
+      </elementAttributes>
+      <pos x="660" y="580"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>NetName</string>
+          <string>address</string>
+        </entry>
+      </elementAttributes>
+      <pos x="660" y="640"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>NetName</string>
+          <string>rst</string>
+        </entry>
+      </elementAttributes>
+      <pos x="460" y="1080"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>rd</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1460" y="1080"/>
+    </visualElement>
+    <visualElement>
+      <elementName>decoder.dig</elementName>
+      <elementAttributes/>
+      <pos x="820" y="400"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>NetName</string>
+          <string>op</string>
+        </entry>
+      </elementAttributes>
+      <pos x="660" y="400"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>op</string>
+        </entry>
+      </elementAttributes>
+      <pos x="820" y="400"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>func</string>
+        </entry>
+      </elementAttributes>
+      <pos x="820" y="420"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>NetName</string>
+          <string>imm\_read</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1080" y="480"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>NetName</string>
+          <string>shamt\_read</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1080" y="500"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>NetName</string>
+          <string>addr\_read</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1080" y="520"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>rt</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1460" y="1060"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>imm\_read</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1460" y="1120"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>rst</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1460" y="1140"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>NetName</string>
+          <string>reg1\_data</string>
+        </entry>
+      </elementAttributes>
+      <pos x="460" y="860"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>NetName</string>
+          <string>reg2\_data</string>
+        </entry>
+      </elementAttributes>
+      <pos x="460" y="980"/>
+    </visualElement>
+    <visualElement>
+      <elementName>addr_control.dig</elementName>
+      <elementAttributes/>
+      <pos x="1560" y="620"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>rs</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1540" y="620"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>reg1\_read</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1540" y="640"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>rst</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1540" y="660"/>
+    </visualElement>
+    <visualElement>
+      <elementName>addr_control.dig</elementName>
+      <elementAttributes/>
+      <pos x="1560" y="800"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>rt</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1540" y="800"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>reg2\_read</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1540" y="820"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation reference="../../../../visualElement[51]/elementAttributes/entry/rotation"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>rst</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1540" y="840"/>
+    </visualElement>
+    <visualElement>
+      <elementName>wd_control.dig</elementName>
+      <elementAttributes/>
+      <pos x="1500" y="1060"/>
+    </visualElement>
+    <visualElement>
+      <elementName>reg_data_control.dig</elementName>
+      <elementAttributes/>
+      <pos x="1460" y="1340"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>shamt\_read</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1440" y="1440"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>reg1\_read</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1440" y="1420"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>reg1\_data</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1440" y="1380"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>rst</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1440" y="1460"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>譯碼階段的指令要進行的運算的來源操作數1</string>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>reg1\_o</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>dec</intFormat>
+        </entry>
+      </elementAttributes>
+      <pos x="1720" y="1400"/>
+    </visualElement>
+    <visualElement>
+      <elementName>reg_data_control.dig</elementName>
+      <elementAttributes/>
+      <pos x="1460" y="1600"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation reference="../../../../visualElement[58]/elementAttributes/entry/rotation"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>shamt\_read</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1440" y="1700"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>reg2\_read</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1440" y="1680"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>reg2\_data</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1440" y="1640"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation reference="../../../../visualElement[61]/elementAttributes/entry/rotation"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>rst</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1440" y="1720"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>譯碼階段的指令要進行的運算的來源操作數1</string>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>reg2\_o</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>dec</intFormat>
+        </entry>
+      </elementAttributes>
+      <pos x="1720" y="1660"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>imm</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1080" y="1500"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>shamt</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1080" y="1560"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Splitter</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Input Splitting</string>
+          <string>0-4,5-31</string>
+        </entry>
+        <entry>
+          <string>Output Splitting</string>
+          <string>32</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1100" y="1560"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Const</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Value</string>
+          <long>0</long>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>27</int>
+        </entry>
+      </elementAttributes>
+      <pos x="1060" y="1600"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Splitter</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Input Splitting</string>
+          <string>0-15,16-31</string>
+        </entry>
+        <entry>
+          <string>Output Splitting</string>
+          <string>32</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1100" y="1500"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Const</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Value</string>
+          <long>0</long>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>16</int>
+        </entry>
+      </elementAttributes>
+      <pos x="1060" y="1540"/>
+    </visualElement>
+  </visualElements>
+  <wires>
+    <wire>
+      <p1 x="500" y="640"/>
+      <p2 x="580" y="640"/>
+    </wire>
+    <wire>
+      <p1 x="600" y="640"/>
+      <p2 x="660" y="640"/>
+    </wire>
+    <wire>
+      <p1 x="1540" y="640"/>
+      <p2 x="1560" y="640"/>
+    </wire>
+    <wire>
+      <p1 x="1660" y="640"/>
+      <p2 x="1720" y="640"/>
+    </wire>
+    <wire>
+      <p1 x="1180" y="1600"/>
+      <p2 x="1460" y="1600"/>
+    </wire>
+    <wire>
+      <p1 x="500" y="580"/>
+      <p2 x="580" y="580"/>
+    </wire>
+    <wire>
+      <p1 x="600" y="580"/>
+      <p2 x="660" y="580"/>
+    </wire>
+    <wire>
+      <p1 x="1020" y="520"/>
+      <p2 x="1080" y="520"/>
+    </wire>
+    <wire>
+      <p1 x="1540" y="840"/>
+      <p2 x="1560" y="840"/>
+    </wire>
+    <wire>
+      <p1 x="1440" y="1420"/>
+      <p2 x="1460" y="1420"/>
+    </wire>
+    <wire>
+      <p1 x="600" y="460"/>
+      <p2 x="660" y="460"/>
+    </wire>
+    <wire>
+      <p1 x="1020" y="460"/>
+      <p2 x="1080" y="460"/>
+    </wire>
+    <wire>
+      <p1 x="1660" y="1100"/>
+      <p2 x="1720" y="1100"/>
+    </wire>
+    <wire>
+      <p1 x="460" y="400"/>
+      <p2 x="500" y="400"/>
+    </wire>
+    <wire>
+      <p1 x="600" y="400"/>
+      <p2 x="660" y="400"/>
+    </wire>
+    <wire>
+      <p1 x="1020" y="400"/>
+      <p2 x="1080" y="400"/>
+    </wire>
+    <wire>
+      <p1 x="500" y="400"/>
+      <p2 x="580" y="400"/>
+    </wire>
+    <wire>
+      <p1 x="1440" y="1680"/>
+      <p2 x="1460" y="1680"/>
+    </wire>
+    <wire>
+      <p1 x="1200" y="1360"/>
+      <p2 x="1460" y="1360"/>
+    </wire>
+    <wire>
+      <p1 x="1540" y="660"/>
+      <p2 x="1560" y="660"/>
+    </wire>
+    <wire>
+      <p1 x="1200" y="1620"/>
+      <p2 x="1460" y="1620"/>
+    </wire>
+    <wire>
+      <p1 x="1080" y="1560"/>
+      <p2 x="1100" y="1560"/>
+    </wire>
+    <wire>
+      <p1 x="1120" y="1560"/>
+      <p2 x="1200" y="1560"/>
+    </wire>
+    <wire>
+      <p1 x="1020" y="540"/>
+      <p2 x="1080" y="540"/>
+    </wire>
+    <wire>
+      <p1 x="1080" y="1500"/>
+      <p2 x="1100" y="1500"/>
+    </wire>
+    <wire>
+      <p1 x="1120" y="1500"/>
+      <p2 x="1180" y="1500"/>
+    </wire>
+    <wire>
+      <p1 x="1540" y="800"/>
+      <p2 x="1560" y="800"/>
+    </wire>
+    <wire>
+      <p1 x="1460" y="1120"/>
+      <p2 x="1500" y="1120"/>
+    </wire>
+    <wire>
+      <p1 x="600" y="480"/>
+      <p2 x="660" y="480"/>
+    </wire>
+    <wire>
+      <p1 x="1020" y="480"/>
+      <p2 x="1080" y="480"/>
+    </wire>
+    <wire>
+      <p1 x="1440" y="1440"/>
+      <p2 x="1460" y="1440"/>
+    </wire>
+    <wire>
+      <p1 x="1460" y="1060"/>
+      <p2 x="1500" y="1060"/>
+    </wire>
+    <wire>
+      <p1 x="600" y="420"/>
+      <p2 x="660" y="420"/>
+    </wire>
+    <wire>
+      <p1 x="1020" y="420"/>
+      <p2 x="1080" y="420"/>
+    </wire>
+    <wire>
+      <p1 x="1440" y="1380"/>
+      <p2 x="1460" y="1380"/>
+    </wire>
+    <wire>
+      <p1 x="1440" y="1700"/>
+      <p2 x="1460" y="1700"/>
+    </wire>
+    <wire>
+      <p1 x="1440" y="1640"/>
+      <p2 x="1460" y="1640"/>
+    </wire>
+    <wire>
+      <p1 x="1060" y="1580"/>
+      <p2 x="1100" y="1580"/>
+    </wire>
+    <wire>
+      <p1 x="1540" y="620"/>
+      <p2 x="1560" y="620"/>
+    </wire>
+    <wire>
+      <p1 x="1060" y="1520"/>
+      <p2 x="1100" y="1520"/>
+    </wire>
+    <wire>
+      <p1 x="1540" y="820"/>
+      <p2 x="1560" y="820"/>
+    </wire>
+    <wire>
+      <p1 x="1660" y="820"/>
+      <p2 x="1720" y="820"/>
+    </wire>
+    <wire>
+      <p1 x="1440" y="1460"/>
+      <p2 x="1460" y="1460"/>
+    </wire>
+    <wire>
+      <p1 x="1460" y="1140"/>
+      <p2 x="1500" y="1140"/>
+    </wire>
+    <wire>
+      <p1 x="600" y="500"/>
+      <p2 x="660" y="500"/>
+    </wire>
+    <wire>
+      <p1 x="1020" y="500"/>
+      <p2 x="1080" y="500"/>
+    </wire>
+    <wire>
+      <p1 x="1460" y="1080"/>
+      <p2 x="1500" y="1080"/>
+    </wire>
+    <wire>
+      <p1 x="600" y="440"/>
+      <p2 x="660" y="440"/>
+    </wire>
+    <wire>
+      <p1 x="1020" y="440"/>
+      <p2 x="1080" y="440"/>
+    </wire>
+    <wire>
+      <p1 x="1440" y="1720"/>
+      <p2 x="1460" y="1720"/>
+    </wire>
+    <wire>
+      <p1 x="1660" y="1400"/>
+      <p2 x="1720" y="1400"/>
+    </wire>
+    <wire>
+      <p1 x="1180" y="1340"/>
+      <p2 x="1460" y="1340"/>
+    </wire>
+    <wire>
+      <p1 x="1660" y="1660"/>
+      <p2 x="1720" y="1660"/>
+    </wire>
+    <wire>
+      <p1 x="1200" y="1360"/>
+      <p2 x="1200" y="1560"/>
+    </wire>
+    <wire>
+      <p1 x="1200" y="1560"/>
+      <p2 x="1200" y="1620"/>
+    </wire>
+    <wire>
+      <p1 x="500" y="400"/>
+      <p2 x="500" y="580"/>
+    </wire>
+    <wire>
+      <p1 x="500" y="580"/>
+      <p2 x="500" y="640"/>
+    </wire>
+    <wire>
+      <p1 x="1460" y="1360"/>
+      <p2 x="1460" y="1380"/>
+    </wire>
+    <wire>
+      <p1 x="1060" y="1580"/>
+      <p2 x="1060" y="1600"/>
+    </wire>
+    <wire>
+      <p1 x="1060" y="1520"/>
+      <p2 x="1060" y="1540"/>
+    </wire>
+    <wire>
+      <p1 x="1180" y="1340"/>
+      <p2 x="1180" y="1500"/>
+    </wire>
+    <wire>
+      <p1 x="1180" y="1500"/>
+      <p2 x="1180" y="1600"/>
+    </wire>
+  </wires>
+  <measurementOrdering/>
+</circuit>
