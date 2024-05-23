@@ -18,6 +18,10 @@
       <elementName>In</elementName>
       <elementAttributes>
         <entry>
+          <string>Description</string>
+          <string>訪存階段的指令最終要寫入目的暫存器的值</string>
+        </entry>
+        <entry>
           <string>Label</string>
           <string>mem\_wdata</string>
         </entry>
@@ -25,16 +29,16 @@
           <string>Bits</string>
           <int>32</int>
         </entry>
-        <entry>
-          <string>Description</string>
-          <string>訪存階段的指令最終要寫入目的暫存器的值</string>
-        </entry>
       </elementAttributes>
-      <pos x="320" y="460"/>
+      <pos x="220" y="300"/>
     </visualElement>
     <visualElement>
       <elementName>In</elementName>
       <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>訪存階段的指令最終要寫入的目的暫存器位址</string>
+        </entry>
         <entry>
           <string>Label</string>
           <string>mem\_wd</string>
@@ -43,40 +47,36 @@
           <string>Bits</string>
           <int>5</int>
         </entry>
-        <entry>
-          <string>Description</string>
-          <string>訪存階段的指令最終要寫入的目的暫存器位址</string>
-        </entry>
       </elementAttributes>
-      <pos x="320" y="300"/>
+      <pos x="220" y="100"/>
     </visualElement>
     <visualElement>
       <elementName>In</elementName>
       <elementAttributes>
-        <entry>
-          <string>Label</string>
-          <string>mem\_wreg</string>
-        </entry>
         <entry>
           <string>Description</string>
           <string>訪存階段的指令最終是否有要寫入的目的暫存器</string>
         </entry>
+        <entry>
+          <string>Label</string>
+          <string>mem\_wreg</string>
+        </entry>
       </elementAttributes>
-      <pos x="320" y="380"/>
+      <pos x="220" y="200"/>
     </visualElement>
     <visualElement>
       <elementName>In</elementName>
       <elementAttributes>
         <entry>
-          <string>Label</string>
-          <string>rst</string>
-        </entry>
-        <entry>
           <string>Description</string>
           <string>復位信號</string>
         </entry>
+        <entry>
+          <string>Label</string>
+          <string>rst</string>
+        </entry>
       </elementAttributes>
-      <pos x="320" y="140"/>
+      <pos x="220" y="400"/>
     </visualElement>
     <visualElement>
       <elementName>Clock</elementName>
@@ -86,11 +86,15 @@
           <string>clk</string>
         </entry>
       </elementAttributes>
-      <pos x="320" y="220"/>
+      <pos x="220" y="480"/>
     </visualElement>
     <visualElement>
       <elementName>Out</elementName>
       <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>回寫階段的指令要寫入目的暫存器的值</string>
+        </entry>
         <entry>
           <string>Label</string>
           <string>wb\_wdata</string>
@@ -99,16 +103,16 @@
           <string>Bits</string>
           <int>32</int>
         </entry>
-        <entry>
-          <string>Description</string>
-          <string>回寫階段的指令要寫入目的暫存器的值</string>
-        </entry>
       </elementAttributes>
-      <pos x="820" y="300"/>
+      <pos x="820" y="340"/>
     </visualElement>
     <visualElement>
       <elementName>Out</elementName>
       <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>回寫階段的指令要寫入的目的暫存器位址</string>
+        </entry>
         <entry>
           <string>Label</string>
           <string>wb\_wd</string>
@@ -117,10 +121,6 @@
           <string>Bits</string>
           <int>5</int>
         </entry>
-        <entry>
-          <string>Description</string>
-          <string>回寫階段的指令要寫入的目的暫存器位址</string>
-        </entry>
       </elementAttributes>
       <pos x="820" y="140"/>
     </visualElement>
@@ -128,17 +128,245 @@
       <elementName>Out</elementName>
       <elementAttributes>
         <entry>
-          <string>Label</string>
-          <string>wb\_wreg</string>
-        </entry>
-        <entry>
           <string>Description</string>
           <string>回寫階段的指令是否有要寫入的目的暫存器</string>
         </entry>
+        <entry>
+          <string>Label</string>
+          <string>wb\_wreg</string>
+        </entry>
       </elementAttributes>
-      <pos x="820" y="220"/>
+      <pos x="820" y="240"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Register</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Bits</string>
+          <int>5</int>
+        </entry>
+      </elementAttributes>
+      <pos x="660" y="120"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Register</elementName>
+      <elementAttributes/>
+      <pos x="660" y="220"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Register</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+      </elementAttributes>
+      <pos x="660" y="320"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Multiplexer</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Bits</string>
+          <int>5</int>
+        </entry>
+      </elementAttributes>
+      <pos x="460" y="100"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Multiplexer</elementName>
+      <elementAttributes/>
+      <pos x="460" y="200"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Multiplexer</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+      </elementAttributes>
+      <pos x="460" y="300"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Const</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Value</string>
+          <long>0</long>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>5</int>
+        </entry>
+      </elementAttributes>
+      <pos x="440" y="140"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Const</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Value</string>
+          <long>0</long>
+        </entry>
+      </elementAttributes>
+      <pos x="440" y="240"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Const</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Value</string>
+          <long>0</long>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+      </elementAttributes>
+      <pos x="440" y="340"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Const</elementName>
+      <elementAttributes/>
+      <pos x="640" y="160"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Const</elementName>
+      <elementAttributes/>
+      <pos x="640" y="260"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Const</elementName>
+      <elementAttributes/>
+      <pos x="640" y="360"/>
     </visualElement>
   </visualElements>
-  <wires/>
+  <wires>
+    <wire>
+      <p1 x="500" y="320"/>
+      <p2 x="660" y="320"/>
+    </wire>
+    <wire>
+      <p1 x="220" y="480"/>
+      <p2 x="580" y="480"/>
+    </wire>
+    <wire>
+      <p1 x="360" y="160"/>
+      <p2 x="480" y="160"/>
+    </wire>
+    <wire>
+      <p1 x="640" y="160"/>
+      <p2 x="660" y="160"/>
+    </wire>
+    <wire>
+      <p1 x="220" y="100"/>
+      <p2 x="460" y="100"/>
+    </wire>
+    <wire>
+      <p1 x="360" y="260"/>
+      <p2 x="480" y="260"/>
+    </wire>
+    <wire>
+      <p1 x="640" y="260"/>
+      <p2 x="660" y="260"/>
+    </wire>
+    <wire>
+      <p1 x="220" y="200"/>
+      <p2 x="460" y="200"/>
+    </wire>
+    <wire>
+      <p1 x="640" y="360"/>
+      <p2 x="660" y="360"/>
+    </wire>
+    <wire>
+      <p1 x="220" y="300"/>
+      <p2 x="460" y="300"/>
+    </wire>
+    <wire>
+      <p1 x="580" y="140"/>
+      <p2 x="660" y="140"/>
+    </wire>
+    <wire>
+      <p1 x="440" y="140"/>
+      <p2 x="460" y="140"/>
+    </wire>
+    <wire>
+      <p1 x="720" y="140"/>
+      <p2 x="820" y="140"/>
+    </wire>
+    <wire>
+      <p1 x="220" y="400"/>
+      <p2 x="360" y="400"/>
+    </wire>
+    <wire>
+      <p1 x="360" y="400"/>
+      <p2 x="480" y="400"/>
+    </wire>
+    <wire>
+      <p1 x="580" y="240"/>
+      <p2 x="660" y="240"/>
+    </wire>
+    <wire>
+      <p1 x="440" y="240"/>
+      <p2 x="460" y="240"/>
+    </wire>
+    <wire>
+      <p1 x="720" y="240"/>
+      <p2 x="820" y="240"/>
+    </wire>
+    <wire>
+      <p1 x="580" y="340"/>
+      <p2 x="660" y="340"/>
+    </wire>
+    <wire>
+      <p1 x="440" y="340"/>
+      <p2 x="460" y="340"/>
+    </wire>
+    <wire>
+      <p1 x="720" y="340"/>
+      <p2 x="820" y="340"/>
+    </wire>
+    <wire>
+      <p1 x="500" y="120"/>
+      <p2 x="660" y="120"/>
+    </wire>
+    <wire>
+      <p1 x="500" y="220"/>
+      <p2 x="660" y="220"/>
+    </wire>
+    <wire>
+      <p1 x="480" y="340"/>
+      <p2 x="480" y="400"/>
+    </wire>
+    <wire>
+      <p1 x="480" y="140"/>
+      <p2 x="480" y="160"/>
+    </wire>
+    <wire>
+      <p1 x="480" y="240"/>
+      <p2 x="480" y="260"/>
+    </wire>
+    <wire>
+      <p1 x="580" y="140"/>
+      <p2 x="580" y="240"/>
+    </wire>
+    <wire>
+      <p1 x="580" y="340"/>
+      <p2 x="580" y="480"/>
+    </wire>
+    <wire>
+      <p1 x="580" y="240"/>
+      <p2 x="580" y="340"/>
+    </wire>
+    <wire>
+      <p1 x="360" y="160"/>
+      <p2 x="360" y="260"/>
+    </wire>
+    <wire>
+      <p1 x="360" y="260"/>
+      <p2 x="360" y="400"/>
+    </wire>
+  </wires>
   <measurementOrdering/>
 </circuit>
