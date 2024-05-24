@@ -153,6 +153,50 @@
       <elementAttributes>
         <entry>
           <string>Description</string>
+          <string>譯碼階段的指令要進行的運算的來源操作數1</string>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>reg1\_o</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>dec</intFormat>
+        </entry>
+      </elementAttributes>
+      <pos x="1720" y="1400"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
+          <string>譯碼階段的指令要進行的運算的來源操作數1</string>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>reg2\_o</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>dec</intFormat>
+        </entry>
+      </elementAttributes>
+      <pos x="1720" y="1660"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Description</string>
           <string>譯碼階段的指令要寫入的目的暫存器位址</string>
         </entry>
         <entry>
@@ -223,46 +267,6 @@
         </entry>
       </elementAttributes>
       <pos x="1720" y="480"/>
-    </visualElement>
-    <visualElement>
-      <elementName>Out</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Description</string>
-          <string>Regfile 模組的第一個讀取暫存器連接埠的讀取位址訊號</string>
-        </entry>
-        <entry>
-          <string>Label</string>
-          <string>reg1\_addr\_o</string>
-        </entry>
-        <entry>
-          <string>Bits</string>
-          <int>5</int>
-        </entry>
-        <entry>
-          <string>intFormat</string>
-          <intFormat>dec</intFormat>
-        </entry>
-      </elementAttributes>
-      <pos x="1720" y="640"/>
-    </visualElement>
-    <visualElement>
-      <elementName>Out</elementName>
-      <elementAttributes>
-        <entry>
-          <string>Description</string>
-          <string>Regfile 模組的第一個讀取暫存器連接埠的讀取啟用訊號</string>
-        </entry>
-        <entry>
-          <string>Label</string>
-          <string>reg1\_read\_o</string>
-        </entry>
-        <entry>
-          <string>intFormat</string>
-          <intFormat>dec</intFormat>
-        </entry>
-      </elementAttributes>
-      <pos x="1720" y="400"/>
     </visualElement>
     <visualElement>
       <elementName>Splitter</elementName>
@@ -820,22 +824,22 @@
       <elementAttributes>
         <entry>
           <string>Description</string>
-          <string>譯碼階段的指令要進行的運算的來源操作數1</string>
+          <string>Regfile 模組的第一個讀取暫存器連接埠的讀取位址訊號</string>
         </entry>
         <entry>
           <string>Label</string>
-          <string>reg1\_o</string>
+          <string>reg1\_addr\_o</string>
         </entry>
         <entry>
           <string>Bits</string>
-          <int>32</int>
+          <int>5</int>
         </entry>
         <entry>
           <string>intFormat</string>
           <intFormat>dec</intFormat>
         </entry>
       </elementAttributes>
-      <pos x="1720" y="1400"/>
+      <pos x="1720" y="640"/>
     </visualElement>
     <visualElement>
       <elementName>reg_data_control.dig</elementName>
@@ -903,22 +907,18 @@
       <elementAttributes>
         <entry>
           <string>Description</string>
-          <string>譯碼階段的指令要進行的運算的來源操作數1</string>
+          <string>Regfile 模組的第一個讀取暫存器連接埠的讀取啟用訊號</string>
         </entry>
         <entry>
           <string>Label</string>
-          <string>reg2\_o</string>
-        </entry>
-        <entry>
-          <string>Bits</string>
-          <int>32</int>
+          <string>reg1\_read\_o</string>
         </entry>
         <entry>
           <string>intFormat</string>
           <intFormat>dec</intFormat>
         </entry>
       </elementAttributes>
-      <pos x="1720" y="1660"/>
+      <pos x="1720" y="400"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
