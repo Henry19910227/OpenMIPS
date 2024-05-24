@@ -190,14 +190,14 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>raddr1</string>
+          <string>raddr2</string>
         </entry>
         <entry>
           <string>Bits</string>
           <int>5</int>
         </entry>
       </elementAttributes>
-      <pos x="-440" y="-460"/>
+      <pos x="-840" y="-460"/>
     </visualElement>
     <visualElement>
       <elementName>In</elementName>
@@ -212,10 +212,10 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>re1</string>
+          <string>re2</string>
         </entry>
       </elementAttributes>
-      <pos x="-320" y="-460"/>
+      <pos x="-720" y="-460"/>
     </visualElement>
     <visualElement>
       <elementName>And</elementName>
@@ -296,14 +296,14 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>raddr2</string>
+          <string>raddr1</string>
         </entry>
         <entry>
           <string>Bits</string>
           <int>5</int>
         </entry>
       </elementAttributes>
-      <pos x="-840" y="-460"/>
+      <pos x="-440" y="-460"/>
     </visualElement>
     <visualElement>
       <elementName>In</elementName>
@@ -318,10 +318,10 @@
         </entry>
         <entry>
           <string>Label</string>
-          <string>re2</string>
+          <string>re1</string>
         </entry>
       </elementAttributes>
-      <pos x="-720" y="-460"/>
+      <pos x="-320" y="-460"/>
     </visualElement>
     <visualElement>
       <elementName>And</elementName>
